@@ -102,19 +102,19 @@
 <div class="stats-band" aria-label="Company statistics">
   <div class="stats-grid">
     <div class="stat-item anim-fade-up delay-1">
-      <span class="stat-number"><span class="counter-number" data-stat="layouts" data-target="48">0</span><span class="stat-suffix">+</span></span>
+      <span class="stat-number"><span class="counter-number" data-stat="layouts" data-target="50">0</span><span class="stat-suffix">+</span></span>
       <div class="stat-label">Layouts Completed</div>
     </div>
     <div class="stat-item anim-fade-up delay-2">
-      <span class="stat-number"><span class="counter-number" data-stat="plots" data-target="1200">0</span><span class="stat-suffix">+</span></span>
+      <span class="stat-number"><span class="counter-number" data-stat="plots" data-target="10">0</span><span class="stat-suffix">+</span></span>
       <div class="stat-label">Plots Sold</div>
     </div>
     <div class="stat-item anim-fade-up delay-3">
-      <span class="stat-number"><span class="counter-number" data-stat="projects" data-target="320">0</span><span class="stat-suffix">+</span></span>
+      <span class="stat-number"><span class="counter-number" data-stat="projects" data-target="10">0</span><span class="stat-suffix">+</span></span>
       <div class="stat-label">Projects Completed</div>
     </div>
     <div class="stat-item anim-fade-up delay-4">
-      <span class="stat-number"><span class="counter-number" data-stat="clients" data-target="850">0</span><span class="stat-suffix">+</span></span>
+      <span class="stat-number"><span class="counter-number" data-stat="clients" data-target="10">0</span><span class="stat-suffix">+</span></span>
       <div class="stat-label">Happy Clients</div>
     </div>
     <div class="stat-item anim-fade-up delay-5">
@@ -238,9 +238,6 @@
     <div class="section-divider section-divider-center"></div>
     <p class="section-subtitle">15 passionate professionals dedicated to delivering excellence in every project.</p>
   </div>
-  <div class="crew-grid" id="crew-grid">
-    <!-- Rendered by JS -->
-  </div>
 </section>
 
 <!-- TESTIMONIALS -->
@@ -251,9 +248,6 @@
     <div class="section-divider section-divider-center"></div>
   </div>
   <div class="testimonials-slider">
-    <div class="testimonial-track" id="testimonial-track">
-      <!-- Rendered by JS -->
-    </div>
     <div class="slider-controls">
       <button class="slider-btn slider-prev" aria-label="Previous testimonial">←</button>
       <div class="slider-dots" id="slider-dots"></div>
@@ -383,7 +377,9 @@
     initScrollAnimations();
   }
 
-  function renderCrew() {
+  c='https://ui-avatars.com/api/?name=${encodeURIComponent(m.name)}&background=1a1f2e&color=D4AF37&size=80'">
+          <div class="crew-online" aria-hidden="true"></div>
+        </div>function renderCrew() {
     const grid = document.getElementById('crew-grid');
     if (!grid) return;
     const crew = getCrew();
@@ -392,9 +388,7 @@
       <div class="crew-card anim-fade-up delay-${(i%5)+1}">
         <div class="crew-photo-wrap">
           <img src="${m.photo}" alt="${m.name}" class="crew-photo" loading="lazy"
-               onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(m.name)}&background=1a1f2e&color=D4AF37&size=80'">
-          <div class="crew-online" aria-hidden="true"></div>
-        </div>
+               onerror="this.sr
         <div class="crew-name">${m.name}</div>
         <div class="crew-role">${m.role}</div>
         <div class="crew-exp">${m.experience}</div>
